@@ -182,20 +182,20 @@
 #     prev_val = val
 
 ## Nested Loops
-numbers = [2,2,2,2,8]
-for x_cnt in numbers:
-    output = ''
-    for count in range(0,x_cnt):
-        output += 'x'
-    print(output)
+# numbers = [2,2,2,2,8]
+# for x_cnt in numbers:
+#     output = ''
+#     for count in range(0,x_cnt):
+#         output += 'x'
+#     print(output)
 
 ## LIST find largest num in list
-num_list = [1,9,2,7,4]
-max = num_list[0]
-for i in num_list:
-    if i > max:
-        max = i
-print(max)
+# num_list = [1,9,2,7,4]
+# max = num_list[0]
+# for i in num_list:
+#     if i > max:
+#         max = i
+# print(max)
 
 
 #### 2D list
