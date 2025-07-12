@@ -13,19 +13,24 @@ while True:
         break
     else:
         print('continue')
-print(f'expenses are {expenses}')
+print(f'\n Expenses are \n {expenses}')
 category_total = {}
 for each_expense in expenses:
         cat = each_expense['Category']
         price = each_expense['Price']
         category_total[cat] = category_total.get(cat,0) + price
 
+print(f"Category Total: \n {category_total}")
+
 print("\nTotal expenses by category:")
 for category, total in category_total.items():
     print(f"{category}: ${total:.2f}")
 
 df_expenses = pd.DataFrame(expenses)
+print(f"Dataframe df_expenses\n{df_expenses}")
+      
 df_totals = pd.DataFrame(list(category_total.items()), columns=['Category','Total'])
+print(f"Dataframe df_totals\n{df_totals}")
 with pd.ExcelWriter('expenses.xlsx', engine='openpyxl') as writer:
     df_expenses.to_excel(writer, sheet_name='expenses', index=False)
     df_totals.to_excel(writer, sheet_name='total', index=False)
